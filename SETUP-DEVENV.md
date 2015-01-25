@@ -34,7 +34,7 @@ $ . local-dev-env/bin/activate
 
 > To quit the virtual environment: ```(local-dev-env) $ deactivate```
 
-> Notice that a new folder "local-dev-env" will be created storing the python packages. *Never commit them into git to save space.* Your remote environment don't need anything you just installed to run. So, exclude this folder from git's control by: ```$ echo "local-dev-env/*" >> .gitignore```
+> Notice that a new folder "local-dev-env" will be created storing the python packages. **Never commit them into git to save space. Your remote environment don't need anything you just installed to run. So, exclude this folder from git's control by: ```$ echo "local-dev-env/*" >> .gitignore```**
 
 
 ## Install the required packages under the virtual environment
