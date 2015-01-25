@@ -1,4 +1,4 @@
-# Setup
+# Setting up Git 
 
 Prerequisite: install GitHub adn enable its Command Line Interface utilities.
 https://git-scm.com/downloads
