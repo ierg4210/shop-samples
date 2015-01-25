@@ -1,4 +1,4 @@
-Setup Development Environment
+Setting up Development/Runtime Environment
 ====================
 We need to install the Amazon Elastic Beanstalk CLI and Node.js for development
 
@@ -31,7 +31,11 @@ $ . local-dev-env/bin/activate
 (local-dev-env) $ 
 ```
 > You'll notice your virtual environment's name in front of your command line. 
+
 > To quit the virtual environment: ```(local-dev-env) $ deactivate```
+
+> Notice that a new folder "local-dev-env" will be created storing the python packages. *Never commit them into git to save space.* Your remote environment don't need anything you just installed to run. So, exclude this folder from git's control by: ```$ echo "local-dev-env/*" >> .gitignore```
+
 
 ## Install the required packages under the virtual environment
 
@@ -64,4 +68,4 @@ v0.10.35
 (local-dev-env) $ npm --version
 1.4.28
 ```
-> Remember: Once you leave the virtual environment (closing terminal/window/PC), you'll need to run the activation command again (i.e., ```$ . local-dev-env/bin/activate```)  in order to use node, npm, and eb
+> Remember: Once you leave the virtual environment (closing terminal/window/PC), you'll need to run the activation command again (i.e., ```$ . local-dev-env/bin/activate```)  in order to use ```node```, ```npm```, and ```eb```
