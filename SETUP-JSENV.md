@@ -94,4 +94,4 @@ express@4.11.1 node_modules/express
 └── type-is@1.5.5 (mime-types@2.0.7)
 ```
 > Notice that a new folder "node_modules" will be created storing the dependency packages.
-> Never commit them into git to save space. Your remote environment should download and install the dependencies by itself. So, exclude this folder from git's control by: ```$ echo "node_modules/*" >> .gitignore```
+> **Never commit them into git to save space. Your remote environment, by looking into the package.json file, can download and install the dependencies by itself. So, exclude this folder from git's control by: ```$ echo "node_modules/*" >> .gitignore```**
