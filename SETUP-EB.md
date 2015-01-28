@@ -28,19 +28,24 @@ Create the remote environment for deployment
 (local-dev-env) $ eb create
 ```
 
-Open the application URL in a browser
+Open the application URL in a browser, and you will see your "Hello World" application deployed remotely.
 ```
 (local-dev-env) $ eb open
 ```
 
-Deploy your latest commit of the current branch to beanstalk
+Check your settings using the Web Interface
+```
+(local-dev-env) $ eb console
+```
+
+Later you'll improve your app. Deploy your latest committed changes of the current branch to beanstalk
 ```
 (local-dev-env) $ eb deploy
 ```
 > Remember any unstaged changes will not be uploaded and deployed. 
 > So, ```$ git add``` and ```$ git commit``` your changes before running ```$ eb deploy```.
 
-> On the other hand, if you expect to deploy your master branch, switch to it by running ```$ git checkout master``` before ```$ eb deploy```.
+> On the other hand, if you expect to deploy your master branch, remember to switch by running ```$ git checkout master``` before ```$ eb deploy```.
 
 SSH into an EC2 instance for debugging purpose
 ```
