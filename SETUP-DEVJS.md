@@ -29,7 +29,7 @@ About to write to /Users/adon/projects/ierg4210/shopXX/package.json:
 
 {
   "name": "shopXX-ierg4210",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "IERG4210 ShopXX",
   "main": "app.js",
   "scripts": {
