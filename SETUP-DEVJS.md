@@ -77,6 +77,6 @@ Run locally you newly created application, literally a webserver
 ```
 $ node app
 ```
-To quit the app, press 'Ctrl + Z'
+To quit the app gracefully, press 'Ctrl + C'
 
 Open your browser to visit http://localhost:8888/. Expect to see "Hello World!"
