@@ -73,9 +73,10 @@ http.createServer(function(request, response) {
 }).listen(process.env.PORT || 8888);
 ```
 
-Run you application locally
+Run locally you newly created application, literally a webserver
 ```
 $ node app
 ```
+To quit the app, press 'Ctrl + Z'
 
 Open your browser to visit http://localhost:8888/. Expect to see "Hello World!"
