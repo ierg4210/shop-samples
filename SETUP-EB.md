@@ -1,17 +1,27 @@
 Setting Amazon Elastic Beanstalk for deployment
 ==============
 
-Prerequisite: You're expected to use EB CLI v3.0 or up
+Prerequisite 1: You're expected to have installed EB CLI v3.0 or up using virtualenv, as described in [SETUP-DEVENV](SETUP-DEVENV.md)
+Prerequisite 2: You're expected to have initialized a npm project, as decribed in [SETUP-DEVJS](SETUP-DEVJS.md)
 ```
 (local-dev-env) $ eb --version
 ```
 
-Initialize EB with some configurations
-- Web Server Model
-- Node.js
+Initialize EB with these configurations:
+- Region: ap-southeast-1 : Asia Pacific (Singapore)
+- Application: [ Create new Application ]
+- Application Name: shopXX
+- Using Node.js? y
+- Do you want to set up SSH for your instances? y
+- keypair: [ Create new KeyPair ]
+- keypair name: aws-eb
+- keypair passphase: ********
+- kerpair same passphrase: ********
 ```
 (local-dev-env) $ eb init
 ```
+> Your keypair is generated at ~/.ssh/aws-eb (secret key) and ~/.ssh/aws-eb.pub (public key)
+> Remember to keep especially your secret key safe. (Many students lost it and could no longer access the VM instances anymore.) 
 
 Create the remote environment for deployment
 ```
