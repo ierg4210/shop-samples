@@ -1,0 +1,11 @@
+#main{width:800px}
+.panel{float:left;width:350px;padding:5px}
+
+fieldset{width:310px}
+form label{clear:left;float:left;width:90px;line-height:23px}
+form div{padding:4px 0}
+form input[type=text],input[type=number],select,textarea{width:200px}
+form input[type=submit]{clear:both}
+
+.hide{display:none}
+.clear{clear:both}
