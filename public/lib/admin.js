@@ -25,8 +25,8 @@ function onSubmitHandler(e) {
 		.send(serializeFormData(this))
 		.end(function (res) {
 			if (res.error) {
-				if (res.body.inputErrors) {
-					res.body.inputErrors.forEach(function(input){
+				if (res.body.inputError) {
+					res.body.inputError.forEach(function(input){
 						alert(input.msg);
 					});
 				}
