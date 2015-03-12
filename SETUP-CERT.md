@@ -1,3 +1,9 @@
+# SSL Certificate Deployment
+References:
+- [http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https.html](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https.html)
+- [http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html)
+
+
 # Key generation using OpenSSL
 Make sure you've openssl installed
 
