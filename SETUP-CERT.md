@@ -1,7 +1,7 @@
-# Generating Certificate using OpenSSL
+# Key generation using OpenSSL
+Make sure you've openssl installed
 
-
-## Generate the private key, 
+## Generate the private key
 Keep it extra safe (never upload it to github)
 ```sh
 $ openssl genrsa 2048 > priv.pem
@@ -63,6 +63,7 @@ Saw=
 
 Choose "admin@ierg4210.org" for email verification
 
+... details to be covered
 
 # Upload your CA-signed cert and private key to elastic beanstalk
 
