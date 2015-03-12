@@ -69,6 +69,6 @@ Choose "admin@ierg4210.org" for email verification
 
 Install the aws client
 ```sh
-$ . virtualenv/bin/activate
+$ . local-dev-env/bin/activate
 $ pip install aws
 ```
