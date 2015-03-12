@@ -63,3 +63,11 @@ Saw=
 
 Choose "admin@ierg4210.org" for email verification
 
+
+# Upload your CA-signed cert and private key to elastic beanstalk
+
+Install the aws client
+```sh
+$ . virtualenv/bin/activate
+$ pip install aws
+```
