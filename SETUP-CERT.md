@@ -10,7 +10,7 @@ Make sure you've openssl installed
 ## Generate the private key
 Keep it extra safe (never upload it to github)
 ```sh
-$ openssl genrsa 2048 > priv.pem
+$ openssl genrsa 2048 > privatekey.pem
 Generating RSA private key, 2048 bit long modulus
 ......................+++
 ....................................................................................................................................+++
@@ -19,7 +19,7 @@ e is 65537 (0x10001)
 
 ## Create the Certificate Signing Request (CSR)
 ```sh
-$ openssl req -new -key priv.pem -out csr.pem
+$ openssl req -new -key privatekey.pem -out csr.pem
 You are about to be asked to enter information that will be incorporated
 into your certificate request.
 What you are about to enter is what is called a Distinguished Name or a DN.
@@ -65,16 +65,41 @@ Saw=
 
 ## Submit the CSR file to CA for a signed Certificate
 
-[Get a 90-day SSL Certifate from Comodo for free](http://www.freessl.su/)
+Get a 90-day SSL Certifate from Comodo for free from [freessl.su](http://www.freessl.su/)
 
-Choose "admin@ierg4210.org" for email verification
+Choose "admin@ierg4210.org" to receive an email to prove domain ownership.
+The teaching team upon receiving this email will authenticate to comodo that we actually authuorize such a SSL cert application.
 
-... details to be covered
+It then take 1 hour to 2 days to have the cert signed by Comodo and emailed to you (in an attachment ssl_certificate.zip).
 
-# Upload your CA-signed cert and private key to elastic beanstalk
+### Upload your CA-signed cert and private key to elastic beanstalk
 
 Install the aws client
 ```sh
 $ . local-dev-env/bin/activate
 $ pip install aws
 ```
+
+Upload the private key and signned cert
+```sh
+$ aws iam upload-server-certificate --server-certificate-name comodo-signed-shop00-2015 --certificate-body file://~/Downloads/ssl_certificate/store00_ierg4210_org.crt --private-key file://priv.pem --certificate-chain file://~/Downloads/ssl_certificate/store00_ierg4210_org.ca-bundle
+{
+    "ServerCertificateMetadata": {
+        "ServerCertificateId": "ASCAI2ANDS6WNBM6GWGCK", 
+        "ServerCertificateName": "comodo-signed-shop00-2015", 
+        "Expiration": "2015-06-11T23:59:59Z", 
+        "Path": "/", 
+        "Arn": "arn:aws:iam::832234303658:server-certificate/comodo-signed-shop00-2015", 
+        "UploadDate": "2015-03-13T17:59:20.397Z"
+    }
+}
+```
+
+Then go to the online AWS console to update your load balancer configuration settings in your Elastic Beanstalk environment with the following information:
+- HTTP port — set this port to 80
+- HTTPS port — set this port to 443
+- SSL certificate ID — set this to your ARN (i.e., comodo-signed-shop00-2015)
+
+After the settings, it may take a few minutes to take effect.
+Visit `https://shop00.ierg4210.org` to verify.
+
