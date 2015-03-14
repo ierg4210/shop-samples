@@ -66,15 +66,15 @@ Saw=
 ## Submit the CSR file to CA for a signed Certificate
 
 Get a 90-day SSL Certifate from Comodo for free from [freessl.su](http://www.freessl.su/)
- - Your Name: <your name>
- - Your Email: <your own email address>
- - Phone: <your mobile phone / or dept phone number>
- - Select the server software used to generate the CSR: Apache/ModSSL
- - CSR: <copy & paste what you've generated>
- - For Domain Control Validation, choose "admin@ierg4210.org" as the approved email address to prove domain ownership. The teaching team upon receiving an email from Comodo will help you authuorize such a SSL cert application.
- - Choose the free option (in russian, Бесплатно)
+ - Your Name: `your name`
+ - Your Email: `your own email address`
+ - Phone: `your mobile phone / or dept phone number`
+ - Select the server software used to generate the CSR: `Apache/ModSSL`
+ - CSR: `copy & paste what you've generated in the last step`
+ - For Domain Control Validation, choose `admin@ierg4210.org` as the approved email address to prove domain ownership. The teaching team upon receiving an email from Comodo will help you authuorize such a SSL cert application.
+ - Choose the free option (in russian, `Бесплатно`)
 
-It then take 1 hour to 2 days to have the cert signed by Comodo and emailed to you (in an attachment ssl_certificate.zip).
+It then take an hour or up to 2 days to have the cert signed by Comodo and emailed to you (in an attachment ssl_certificate.zip).
 
 ### Upload your CA-signed cert and private key to elastic beanstalk
 
