@@ -71,9 +71,8 @@ Get a 90-day SSL Certifate from Comodo for free from [freessl.su](http://www.fre
  - Phone: <your mobile phone / or dept phone number>
  - Select the server software used to generate the CSR: Apache/ModSSL
  - CSR: <copy & paste what you've generated>
- - For Domain Control Validation, choose "admin@ierg4210.org" as the approved email address to prove domain ownership. 
-
-The teaching team upon receiving this email will authenticate to comodo that we actually authuorize such a SSL cert application.
+ - For Domain Control Validation, choose "admin@ierg4210.org" as the approved email address to prove domain ownership. The teaching team upon receiving an email from Comodo will help you authuorize such a SSL cert application.
+ - Choose the free option (in russian, Бесплатно)
 
 It then take 1 hour to 2 days to have the cert signed by Comodo and emailed to you (in an attachment ssl_certificate.zip).
 
