@@ -5,7 +5,7 @@ References:
 
 
 # Key generation using OpenSSL
-Make sure you've openssl installed
+Make sure you've openssl installed, and do this in an *nix machine.
 
 ## Generate the private key
 Keep it extra safe (never upload it to github)
@@ -66,8 +66,13 @@ Saw=
 ## Submit the CSR file to CA for a signed Certificate
 
 Get a 90-day SSL Certifate from Comodo for free from [freessl.su](http://www.freessl.su/)
+ - Your Name: <your name>
+ - Your Email: <your own email address>
+ - Phone: <your mobile phone / or dept phone number>
+ - Select the server software used to generate the CSR: Apache/ModSSL
+ - CSR: <copy & paste what you've generated>
+ - For Domain Control Validation, choose "admin@ierg4210.org" as the approved email address to prove domain ownership. 
 
-Choose "admin@ierg4210.org" to receive an email to prove domain ownership.
 The teaching team upon receiving this email will authenticate to comodo that we actually authuorize such a SSL cert application.
 
 It then take 1 hour to 2 days to have the cert signed by Comodo and emailed to you (in an attachment ssl_certificate.zip).
@@ -80,7 +85,7 @@ $ . local-dev-env/bin/activate
 $ pip install aws
 ```
 
-Upload the private key and signned cert
+Upload the private key and signed cert
 ```sh
 $ aws iam upload-server-certificate --server-certificate-name comodo-signed-shop00-2015 --certificate-body file://~/Downloads/ssl_certificate/store00_ierg4210_org.crt --private-key file://priv.pem --certificate-chain file://~/Downloads/ssl_certificate/store00_ierg4210_org.ca-bundle
 {
